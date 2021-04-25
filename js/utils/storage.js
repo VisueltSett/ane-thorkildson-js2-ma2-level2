@@ -6,8 +6,9 @@ export function getFromStorage(key) {
     const value = localStorage.getItem(key);
 
     if (!value) {
-        return [];
+        return "Your list is currently empty - Feel free to add some new items";
     }
+
 
     return JSON.parse(value);
 }

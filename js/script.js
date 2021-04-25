@@ -1,11 +1,13 @@
 import createList from "./components/createList.js";
 import { saveToStorage, getFromStorage } from "./utils/storage.js";
 import {storedList} from "./settings.js";
-import deleteButton from "./components/deleteButton.js";
 
-const myList = getFromStorage();
+
+
+let myList = getFromStorage(storedList);
 createList(myList);
-deleteButton();
+
+
 
 
 const inputValue = document.querySelector("input");

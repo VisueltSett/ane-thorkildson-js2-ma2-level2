@@ -1,3 +1,5 @@
+import {storedList} from "../settings.js";
+import { saveToStorage } from "../utils/storage.js";
 
 
 export default function createList(myList) {
@@ -13,6 +15,36 @@ export default function createList(myList) {
                                 </li>`;
     });
 
+    const deleteButton = document.querySelectorAll("li i");
 
+    deleteButton.forEach(function (trashcan) {
+        trashcan.addEventListener("click", deleteItem);
+    });
+    
+
+    function deleteItem(event) {
+        console.log(event);
+    
+        if(confirm("Are you sure you want to delete this item?")) {
+    
+            const deleteThisItem = event.target.dataset.id;
+
+            const myNewList = myList.filter(function (item){
+                if(deleteThisItem !== item.id) {
+                    return true;
+                }
+            });
+
+            myList = myNewList;
+            createList(myNewList);
+            saveToStorage(storedList, myNewList);
+        }
+
+    }
 }
+
+
+
+
+
 
