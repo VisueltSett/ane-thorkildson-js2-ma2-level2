@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+
+
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: rgb(17, 49, 49);
+	background: rgba(1, 108, 196, 0.1); /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#eef2f3,
+		rgba(1, 108, 196, 0.1)
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#eef2f3,
+		rgba(1, 108, 196, 0.1)
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+	color: rgb(9, 6, 129, .8);
+	font-weight: 300;
+	font-size: 2.5rem;
+	text-shadow: 2px 2px 6px rgb(255, 255, 255, 1);
+}
+
+h3 {
+	text-decoration: underline;
+	font-size: 1.2rem;
+	font-weight: 300;
+	color: rgb(9, 6, 129);
+}
+
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+li {
+	margin: 1rem;
+	padding: 1.5rem 1rem;
+	background: white;
+	list-style: none;
+	border: 1px solid lightgrey;
+	border-radius: 1rem;
+	min-width: 250px;
+	position: relative;
+}
+li span h3 {
+	display: inline;
+}
+li span {
+	margin-left: 1rem;
+}
+
+i {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 1rem;
+	color:  rgb(9, 6, 129, .6);
+	cursor: pointer;
+}
+
+
+input[type="text"] {
+	background: transparent;
+	border: none;
+	width: 90%;
+	padding: 0.5rem;
+}
